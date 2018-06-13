@@ -1,7 +1,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
+import ServiceList from "./components/service-list.component";
+
 ReactDOM.render(
-    <div>Hello world</div>,
+    <ServiceList/>,
     document.getElementById('root')
 );
