@@ -25,6 +25,7 @@ gulp.task('jest', function () {
         ],
         "transform": {
             "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-        }
+        },
+        "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.ts"
     }));
 });
