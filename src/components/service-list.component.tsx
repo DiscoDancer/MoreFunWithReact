@@ -4,7 +4,7 @@ import ServiceIcon from "./service-icon.component";
 import ServiceListModel from "../models/service-list.model";
 import ApiService from "../services/api.service";
 import ServiceIconModel from "../models/service-icon.model";
-import CopyService from "../services/copy-service";
+import CopyService from "../services/copy.service";
 
 interface ServiceListState {
     model: ServiceListModel
