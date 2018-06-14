@@ -1,9 +1,7 @@
 import * as React from "react";
-import * as ReactDOM from "react-dom";
 import ServiceIcon from "../service-icon.component";
 import * as renderer from 'react-test-renderer';
 import ServiceIconModel from "../../models/service-icon.model";
-import * as TestUtils from 'react-dom/test-utils';
 import {shallow} from 'enzyme';
 
 const model = new ServiceIconModel(
@@ -13,13 +11,18 @@ const model = new ServiceIconModel(
     "description"
 );
 
-it("ServiceIcon is being changed visually after click", () => {
+it("ServiceIcon is being changed visually when activeness is changed", () => {
 
     const component = shallow(<ServiceIcon model={model} isActive={false}/>);
 
-    component.hasClass("passive");
-
     expect(component.hasClass("passive")).toBe(true);
+
+    component.setProps({
+        model: model,
+        isActive: true
+    });
+
+    expect(component.hasClass("active")).toBe(true);
 });
 
 test('ServiceIcon passive by props snapshot test', () => {
