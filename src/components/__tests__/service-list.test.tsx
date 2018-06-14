@@ -21,12 +21,12 @@ const fakeData = new ServiceListModel([
 ]);
 
 const fakeDataService = {
-    serviceListModel: Promise.resolve(fakeData)
+    getServiceListModel: (propertyId: string) => Promise.resolve(fakeData)
 };
 
 it("ServiceList is being changed visually when ServiceIcon is clicked", () => {
 
-    const component = mount(<ServiceList dataService={fakeDataService}/>);
+    const component = mount(<ServiceList dataService={fakeDataService} propertyId={""}/>);
 
 
     return Promise
@@ -65,7 +65,7 @@ it("ServiceList is being changed visually when ServiceIcon is clicked", () => {
 
 test('ServiceList snapshot test', () => {
         const component = renderer.create(
-            <ServiceList dataService={fakeDataService}/>,
+            <ServiceList dataService={fakeDataService} propertyId={""}/>,
         );
 
         let tree = component.toJSON();

@@ -14,6 +14,7 @@ interface ServiceListState {
 
 interface ServiceListProps {
     dataService?: DataService;
+    propertyId: string;
 }
 
 export default class ServiceList extends React.Component<ServiceListProps, ServiceListState> {
@@ -47,13 +48,14 @@ export default class ServiceList extends React.Component<ServiceListProps, Servi
 
     componentDidMount() {
         const self = this;
-        this.props.dataService.serviceListModel.then((model) => {
-            self.setState({
-                model: model,
-                iconStates: Array(model.serviceIcons.length).fill(false),
-                description: ""
-            });
-        }).catch((err) => {
+        this.props.dataService.getServiceListModel(this.props.propertyId)
+            .then((model) => {
+                self.setState({
+                    model: model,
+                    iconStates: Array(model.serviceIcons.length).fill(false),
+                    description: ""
+                });
+            }).catch((err) => {
             console.log("error " + err);
         });
     }
@@ -71,7 +73,7 @@ export default class ServiceList extends React.Component<ServiceListProps, Servi
 
     render() {
         const serviceIcons = this.state.model.serviceIcons
-            .map((m, index) => this.renderServiceIcon(m,index));
+            .map((m, index) => this.renderServiceIcon(m, index));
 
         return (
             <section className={"service-list"}>

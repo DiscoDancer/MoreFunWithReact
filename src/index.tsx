@@ -4,6 +4,6 @@ import * as ReactDOM from "react-dom";
 import ServiceList from "./components/service-list.component";
 
 ReactDOM.render(
-    <ServiceList/>,
+    <ServiceList propertyId={""}/>,
     document.getElementById('root')
 );
