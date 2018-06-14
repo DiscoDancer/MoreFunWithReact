@@ -4,6 +4,7 @@ import ServiceIcon from "./service-icon.component";
 import ServiceListModel from "../models/service-list.model";
 import ApiService from "../services/api.service";
 import ServiceIconModel from "../models/service-icon.model";
+import CopyService from "../services/copy-service";
 
 interface ServiceListState {
     model: ServiceListModel
@@ -29,7 +30,7 @@ export default class ServiceList extends React.Component<ServiceListProps, Servi
 
     handleIconClicked(index: number) {
 
-        const copyModel = deepcopy<ServiceListModel>(this.state.model);
+        const copyModel = CopyService.deepcopy<ServiceListModel>(this.state.model);
         const newStates = Array(copyModel.serviceIcons.length).fill(false);
         newStates[index] = true;
 
@@ -78,8 +79,4 @@ export default class ServiceList extends React.Component<ServiceListProps, Servi
             </section>
         );
     }
-}
-
-function deepcopy<T>(o: T): T {
-    return JSON.parse(JSON.stringify(o));
 }
