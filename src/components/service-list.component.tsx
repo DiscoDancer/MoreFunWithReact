@@ -34,13 +34,17 @@ export default class ServiceList extends React.Component<ServiceListProps, Servi
     }
 
     render() {
+        const serviceIcons = this.state.model.serviceIcons.map((m, index) => {
+            return (
+                <ServiceIcon
+                    model={m}
+                    isActive={false}
+                />
+            );
+        });
+
         return (
-            <div>
-                <h2>{this.state.model.serviceIcons.length}</h2>
-                <ServiceIcon/>
-                <ServiceIcon/>
-                <ServiceIcon/>
-            </div>
+            serviceIcons
         );
     }
 }
