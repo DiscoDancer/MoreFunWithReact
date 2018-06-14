@@ -13,20 +13,23 @@ const model = new ServiceIconModel(
 
 it("ServiceIcon is being changed visually when activeness is changed", () => {
 
+    // assign/action
     const component = shallow(<ServiceIcon model={model} isActive={false}/>);
 
+    // assert
     expect(component.hasClass("passive")).toBe(true);
 
+    // action
     component.setProps({
         model: model,
         isActive: true
     });
 
+    // assert
     expect(component.hasClass("active")).toBe(true);
 });
 
 test('ServiceIcon passive by props snapshot test', () => {
-
     const component = renderer.create(
         <ServiceIcon model={model} isActive={false}/>,
     );
