@@ -68,6 +68,12 @@ test('ServiceList snapshot test', () => {
             <ServiceList dataService={fakeDataService} propertyId={""}/>,
         );
 
+        component.root.instance.setState({
+            model: fakeData,
+            iconStates: Array(3).fill(false),
+            description: ""
+        });
+
         let tree = component.toJSON();
         expect(tree).toMatchSnapshot();
     }

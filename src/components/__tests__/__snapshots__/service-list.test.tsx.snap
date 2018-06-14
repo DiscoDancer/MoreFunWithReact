@@ -6,7 +6,68 @@ exports[`ServiceList snapshot test 1`] = `
 >
   <ul
     className="row"
-  />
+  >
+    <li
+      className="col-2 service-icon passive"
+      onClick={[Function]}
+    >
+      <figure>
+        <img
+          alt="service icon image"
+          className="passive-image"
+          src="http://elo.dev.localhost/-/media/toimitilat_elo_fi-kuvat/palveluikonit/64px/ke_k.ashx?h=100&amp;w=100&amp;la=fi-FI&amp;hash=AD46B11FB0D795D9705443A66BDCFE22EF86E694"
+        />
+        <img
+          alt="service icon image when it's active"
+          className="active-image"
+          src="http://elo.dev.localhost/-/media/toimitilat_elo_fi-kuvat/palveluikonit/64px/ke_h.ashx?h=100&w=101&la=fi-FI&hash=025C1206A4F4B594BF55BF72F2F7D317DE19F715"
+        />
+        <figcaption>
+          Keskustan palvelut
+        </figcaption>
+      </figure>
+    </li>
+    <li
+      className="col-2 service-icon passive"
+      onClick={[Function]}
+    >
+      <figure>
+        <img
+          alt="service icon image"
+          className="passive-image"
+          src="http://elo.dev.localhost/-/media/toimitilat_elo_fi-kuvat/palveluikonit/64px/ke_k.ashx?h=100&amp;w=100&amp;la=fi-FI&amp;hash=AD46B11FB0D795D9705443A66BDCFE22EF86E694"
+        />
+        <img
+          alt="service icon image when it's active"
+          className="active-image"
+          src="http://elo.dev.localhost/-/media/toimitilat_elo_fi-kuvat/palveluikonit/64px/ke_h.ashx?h=100&w=101&la=fi-FI&hash=025C1206A4F4B594BF55BF72F2F7D317DE19F715"
+        />
+        <figcaption>
+          Keskustan palvelut2
+        </figcaption>
+      </figure>
+    </li>
+    <li
+      className="col-2 service-icon passive"
+      onClick={[Function]}
+    >
+      <figure>
+        <img
+          alt="service icon image"
+          className="passive-image"
+          src="http://elo.dev.localhost/-/media/toimitilat_elo_fi-kuvat/palveluikonit/64px/ke_k.ashx?h=100&amp;w=100&amp;la=fi-FI&amp;hash=AD46B11FB0D795D9705443A66BDCFE22EF86E694"
+        />
+        <img
+          alt="service icon image when it's active"
+          className="active-image"
+          src="http://elo.dev.localhost/-/media/toimitilat_elo_fi-kuvat/palveluikonit/64px/ke_h.ashx?h=100&w=101&la=fi-FI&hash=025C1206A4F4B594BF55BF72F2F7D317DE19F715"
+        />
+        <figcaption>
+          Keskustan palvelut3
+        </figcaption>
+      </figure>
+    </li>
+  </ul>
   <div
     className="description"
   >
