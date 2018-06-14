@@ -1,5 +1,7 @@
 import sum from ".././sum";
 
+
+/*Dirty hacks because it and expect are globally defined and this is TypeScript*/
 let it, expect:any;
 let w: any = window;
 
