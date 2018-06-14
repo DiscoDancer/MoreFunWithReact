@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ServiceList snapshot test 1`] = `
+<section
+  className="service-list"
+>
+  <ul
+    className="row"
+  />
+  <div
+    className="description"
+  >
+    
+  </div>
+</section>
+`;

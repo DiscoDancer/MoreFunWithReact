@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ServiceIcon active by props snapshot test 1`] = `
+<li
+  className="col-2 service-icon active"
+>
+  <figure>
+    <img
+      alt="service icon image"
+      className="passive-image"
+      src="/icon.jpg"
+    />
+    <img
+      alt="service icon image when it's active"
+      className="active-image"
+      src="/active_icon.jpg"
+    />
+    <figcaption>
+      name
+    </figcaption>
+  </figure>
+</li>
+`;
+
+exports[`ServiceIcon passive by props snapshot test 1`] = `
+<li
+  className="col-2 service-icon passive"
+>
+  <figure>
+    <img
+      alt="service icon image"
+      className="passive-image"
+      src="/icon.jpg"
+    />
+    <img
+      alt="service icon image when it's active"
+      className="active-image"
+      src="/active_icon.jpg"
+    />
+    <figcaption>
+      name
+    </figcaption>
+  </figure>
+</li>
+`;

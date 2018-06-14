@@ -2,7 +2,7 @@ import * as React from "react";
 
 import ServiceIcon from "./service-icon.component";
 import ServiceListModel from "../models/service-list.model";
-import ApiService from "../services/api.service";
+import ApiService, {DataService} from "../services/api.service";
 import ServiceIconModel from "../models/service-icon.model";
 import CopyService from "../services/copy.service";
 
@@ -13,13 +13,17 @@ interface ServiceListState {
 }
 
 interface ServiceListProps {
-
+    dataService?: DataService;
 }
 
 export default class ServiceList extends React.Component<ServiceListProps, ServiceListState> {
 
     constructor(props: ServiceListProps) {
         super(props);
+
+        if (props.dataService == null) {
+            props.dataService = new ApiService();
+        }
 
         this.state = {
             model: new ServiceListModel([]),
@@ -43,7 +47,7 @@ export default class ServiceList extends React.Component<ServiceListProps, Servi
 
     componentDidMount() {
         const self = this;
-        ApiService.propertyServices.then((model) => {
+        this.props.dataService.serviceListModel.then((model) => {
             self.setState({
                 model: model,
                 iconStates: Array(model.serviceIcons.length).fill(false),
@@ -60,6 +64,7 @@ export default class ServiceList extends React.Component<ServiceListProps, Servi
                 model={model}
                 isActive={this.state.iconStates[index]}
                 onClick={() => this.handleIconClicked(index)}
+                key={index}
             />
         );
     }
