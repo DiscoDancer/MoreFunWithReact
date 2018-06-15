@@ -1,5 +1,6 @@
 .service-list {
     background-color: black;
+    padding-bottom: 20px;
 }
 
 .service-list .description {

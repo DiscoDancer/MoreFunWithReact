@@ -1,10 +1,9 @@
 const gulp = require("gulp");
 const webpack = require("webpack");
-const webpackConfig = require("./webpack.config.js");
 const jest = require('gulp-jest').default;
 const glob = require("glob");
 
-
+const webpackConfig = require("./webpack.config.js");
 
 gulp.task("react-bundle", function () {
     webpack(webpackConfig, function (err, stats) {

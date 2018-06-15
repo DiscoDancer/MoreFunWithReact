@@ -50,6 +50,9 @@ it("ServiceList is being changed visually when ServiceIcon is clicked", () => {
 
             // action: do click and then update parsed nodes
             lis.at(0).simulate("click");
+
+
+
             component.update();
             lis = component.find('ul li');
 
